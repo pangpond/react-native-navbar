@@ -4,17 +4,21 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/SimpleLineIcons'
 
 import styles from './styles';
 
 export default class NavbarButton extends Component {
   render() {
-    const { style, tintColor, margin, title, handler, disabled } = this.props;
+    const { style, tintColor, margin, title, handler, disabled, icon } = this.props;
 
     return (
       <TouchableOpacity style={styles.navBarButton} onPress={handler} disabled={disabled}>
         <View style={style}>
-          <Text style={[styles.navBarButtonText, { color: tintColor, }, ]}>{title}</Text>
+          {icon !== undefined ?
+            <Icon name={icon || 'home'} size={26} style={[styles.navBarButtonText, { color: tintColor }]} /> :
+            <Text style={[styles.navBarButtonText, { color: tintColor }]}>{title}</Text>
+          }
         </View>
       </TouchableOpacity>
     );
