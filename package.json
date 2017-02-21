@@ -15,7 +15,8 @@
     "navbar"
   ],
   "peerDependencies": {
-    "react-native": ">= 0.16"
+    "react-native": ">= 0.16",
+    "react-native-vector-icons": "^4.0.0"
   },
   "author": "Alexey Kureev <kureev-mail@ya.ru> (https://github.com/Kureev)",
   "license": "MIT",

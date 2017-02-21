@@ -61,7 +61,11 @@ class NavigationBar extends Component {
             title={data.title}
             style={[data.style, style, ]}
             tintColor={data.tintColor}
-            handler={data.handler}/>
+            handler={data.handler}
+            handler={data.handler}
+            disabled={data.disabled} 
+            icon={data.icon}
+          />
         )}
       </View>
     );
